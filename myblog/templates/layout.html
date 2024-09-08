@@ -1,0 +1,114 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'main.css' %}" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <header
+      class="fixed left-0 right-0 top-0 z-[1000] mx-auto w-full border border-b border-indigo-500 bg-indigo-700 px-4 text-white shadow-md md:px-8 lg:px-12 xl:px-16 2xl:px-[5rem]"
+    >
+      <nav class="mx-auto flex items-center justify-between py-3">
+        <a href="#" class="block text-2xl font-semibold text-inherit">
+          InsightHub
+        </a>
+        <a href="#" class="flex items-center gap-1 text-lg text-inherit">
+          <i class="bx bx-log-in text-2xl"></i>
+          <span>Login</span>
+        </a>
+      </nav>
+    </header>
+    <nav class="">
+      <ul
+        class="group fixed left-0 top-0 z-[100] block h-screen space-y-1 overflow-auto bg-indigo-700 pt-20 text-lg text-white transition-all duration-200 ease-linear"
+      >
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-home-alt"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Home</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-news"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >News</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-football"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Sport</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bxs-business"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Business</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-bulb"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Innovation</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-globe"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Culture</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-party"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Entertainment</span
+          >
+        </li>
+        <li
+          class="flex cursor-pointer items-center gap-2 py-2 pl-4 pr-3 transition-all duration-200 ease-linear hover:bg-indigo-800 lg:pr-6"
+        >
+          <i class="bx bx-map"></i>
+          <span
+            class="w-0 flex-1 overflow-hidden font-[600] transition-all duration-200 ease-linear group-hover:w-[8rem] lg:w-[8rem]"
+            >Travel</span
+          >
+        </li>
+      </ul>
+    </nav>
+  </body>
+</html>
