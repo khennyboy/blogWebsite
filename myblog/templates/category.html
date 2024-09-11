@@ -1,15 +1,15 @@
-{% extends 'layout.html' %} {% load static %} {% block body %} 
+{% extends 'layout.html' %} {% load static %}
+{% block body %} 
 {% include 'image.html' %}
+<div class="ml-12 px-2 sm:px-6 lg:ml-[12rem] lg:px-10 ">
 
-<div class="ml-12 px-2 sm:px-6 lg:ml-[12rem] lg:px-10">
-  <h2 class="mb-8 text-center font-bold sm:text-xl lg:text-2xl xl:mb-[4rem]">
-    Discover Our Latest Articles
-  </h2>
-  <div
-    class="all_posts mb-8 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-8 xl:mb-[3rem] xl:grid-cols-3"
+<h2 class="mb-8 text-center font-bold sm:text-xl lg:text-2xl xl:mb-[4rem]">
+   Discover Our {{ category}} Posts</h1>
+</h2>
+ <div class="all_posts mb-8 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-8 xl:mb-[3rem] xl:grid-cols-3"
   >
-    {% for post in all_post %}
-    <div class="posts relative overflow-hidden rounded-lg bg-white shadow-md hidden">
+    {% for post in all_posts %}
+    <div class="relative overflow-hidden rounded-lg bg-white shadow-md">
       <img
         loading="lazy"
         src="{{ post.image }}"
@@ -18,7 +18,7 @@
       />
       <div class="px-4 py-4">
         <h2 class="mb-2 font-semibold lg:text-xl">{{ post.title }}</h2>
-        <p class="mb-8 text-gray-700">{{ post.content|slice:":150" }}...</p>
+        <p class="mb-8 text-gray-700">{{ post.content|slice:":100" }}...</p>
 
         <div
           class="absolute bottom-3 left-0 right-0 mx-auto flex w-full justify-between px-4"
@@ -31,9 +31,10 @@
             >
               {% csrf_token %}
               <input type="hidden" name="post_id" value="{{ post.id }}" />
-
+              <input type="hidden" name="category" value="{{nameCategory}}">
+              <input type="hidden" name="next" value="categoryPost">
         {% if request.user.is_authenticated %}
-                {% if post.id in liked_posts %}
+                {% if post.id in liked_post %}
                   <button type="submit">
                     <i class="bx bxs-like text-xl"></i> 
                   </button>
@@ -66,12 +67,6 @@
     </div>
     {% endfor %}
   </div>
-
-  <button
-   id="show_more_posts"
-    class="mx-auto mb-16 block w-fit rounded-lg bg-blue-500 px-4 py-2 font-semibold text-white shadow-md transition-colors duration-300 hover:bg-blue-600 disabled:cursor-not-allowed"
-  >
-    Show more posts
-  </button>
 </div>
-{% endblock body %}
+
+{% endblock %}
