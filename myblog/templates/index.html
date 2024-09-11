@@ -34,18 +34,18 @@
 
         {% if request.user.is_authenticated %}
                 {% if post.id in liked_posts %}
-                  <button type="submit">
-                    <i class="bx bxs-like text-xl"></i> 
-                  </button>
+                  <button type="submit" class="text-blue-500 hover:text-blue-700 transition-colors">
+                        <i class="bx bxs-like text-2xl"></i>
+                </button>
                 {% else %}
-                  <button type="submit">
-                    <i class="bx bx-like text-xl"></i> 
-                  </button>
+                  <button type="submit" class="text-gray-500 hover:text-blue-500 transition-colors">
+                        <i class="bx bx-like text-2xl"></i>
+                    </button>
                 {% endif %}
               {% else %}
-                <button type="submit">
-                  <i class="bx bx-like text-xl"></i> 
-                </button>
+               <button type="submit" class="text-gray-500 hover:text-blue-500 transition-colors">
+                        <i class="bx bx-like text-2xl"></i>
+                    </button>
               {% endif %}
             </form>
 
