@@ -86,7 +86,7 @@
         "showMethod": "fadeIn",
         "hideMethod": "fadeOut"
     };
-    toastr.error("{{ message }}");
+ toastr["{{ message.tags }}"]("{{ message }}");
     {% endfor %}
     {% endif %}
   </script>
