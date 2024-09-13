@@ -68,21 +68,12 @@ def index_view(request):
 @csrf_protect
 def login_view(request):
     if request.method == 'POST':
-        identifier = request.POST.get('username')  
+        username = request.POST.get('username').strip()
         password = request.POST.get('password')
-
-        is_email = False
-        try:
-            validate_email(identifier)
-            is_email = True
-        except ValidationError:
-            is_email = False
-
-        if is_email:
-            user = authenticate(request, email=identifier, password=password)
-        else:
-            user = authenticate(request, username=identifier, password=password)
-
+        print(username, password)
+        if username !='' and password !='':
+            user = authenticate(request, username=username, password=password)
+            
         if user is not None:
             login(request, user)
             return redirect('index')
